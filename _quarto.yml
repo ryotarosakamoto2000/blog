@@ -2,9 +2,9 @@
 
 # website settings
 website:
-  title: "Gandalf"                                # Your name
-  description: "Gandalf is a renowned wizard and scholar of Middle-earth"   # A brief slogan (optional)
-  image: img/my_image.jpg
+  title: "Ryotaro SAKAMOTO"                                # Your name
+  description: "graduate student of University of Tokyo"   # A brief slogan (optional)
+  image: img/profile.jpg
   
   favicon: img/favicon.png
   
@@ -24,29 +24,20 @@ website:
     
     # your social media handles
     right:
-      - icon: folder-symlink
-        href: https://www.marvinschmitt.com/blog/website-tutorial-quarto/
       - icon: twitter
-        href: https://twitter.com/MarvinSchmittML
-      - icon: linkedin
-        href: https://www.linkedin.com/in/marvin-schmitt-a85b321a2/
+        href: https://twitter.com
       - icon: envelope
         aria-label: email
-        href: "mailto:mail.marvinschmitt@gmail.com"  
+        href: "sakamotoryotaro582@g.ecc.u-tokyo.ac.jp"  
   
   
 
-# Don't touch unless you know what you are doing :) ------------
   search: 
     location: navbar
     type: textbox
   page-footer: 
     left: |
-      <span class="faux-block">&#169; 2023 Marvin Schmitt CC BY-SA 4.0</span>
-    center: |
-      <span class="faux-block"><a href="https://www.marvinschmitt.com/blog/website-tutorial-quarto/">View the tutorial for this template!</a></span>
-    right: |
-      <span class="faux-block"><a href="https://github.com/marvinschmitt/quarto-website-template/">View source on GitHub</a></span>
+      <span class="faux-block">2023 Ryotaro SAKAMOTO</span>
 
 project:
   type: website
