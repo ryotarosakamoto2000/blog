@@ -15,12 +15,12 @@ website:
     
     # your sub-pages
     left:
-      - text: "Projects"
-        href: projects/index.qmd
-      - text: "Photography"
-        href: photography/index.qmd
-      - text: "CV"
-        href: cv/index.qmd
+      - text: "Biography"
+        href: biography/index.qmd
+      - text: "Research"
+        href: research/index.qmd
+      - text: "blog"
+        href: blog/index.qmd
     
     # your social media handles
     right:
@@ -58,6 +58,12 @@ format:
     theme: 
       - pulse
       - html/styles.scss
+    header-includes: |
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;400&display=swap" rel="stylesheet">
+    link-citations: yes
+    mainfont: Noto Sans JP
     toc: false
     code-link: true
     anchor-sections: true
