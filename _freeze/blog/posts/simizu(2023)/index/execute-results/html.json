@@ -1,0 +1,16 @@
+{
+  "hash": "234a5157405a9aa4fe17e31eef95bef1",
+  "result": {
+    "markdown": "---\ntitle: \"数値シミュレーションで読み解く統計のしくみ\"\nauthor: \"Ryotaro SAKAMOTO\"\ndate: \"2023-12-09\"\ncategories: [reading, psychology]\ndraft: true\n---\n\n\n# chapter 3\n\nさいころを2つ振って平均を求めるシミュレーション\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\n```\n\n::: {.cell-output .cell-output-stderr}\n```\nWarning: package 'tidyverse' was built under R version 4.2.2\n```\n:::\n\n::: {.cell-output .cell-output-stderr}\n```\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──\n✔ ggplot2 3.4.3     ✔ purrr   1.0.2\n✔ tibble  3.2.1     ✔ dplyr   1.1.3\n✔ tidyr   1.2.0     ✔ stringr 1.4.0\n✔ readr   2.1.2     ✔ forcats 1.0.0\n```\n:::\n\n::: {.cell-output .cell-output-stderr}\n```\nWarning: package 'ggplot2' was built under R version 4.2.3\n```\n:::\n\n::: {.cell-output .cell-output-stderr}\n```\nWarning: package 'tibble' was built under R version 4.2.3\n```\n:::\n\n::: {.cell-output .cell-output-stderr}\n```\nWarning: package 'purrr' was built under R version 4.2.3\n```\n:::\n\n::: {.cell-output .cell-output-stderr}\n```\nWarning: package 'dplyr' was built under R version 4.2.3\n```\n:::\n\n::: {.cell-output .cell-output-stderr}\n```\nWarning: package 'forcats' was built under R version 4.2.3\n```\n:::\n\n::: {.cell-output .cell-output-stderr}\n```\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n```\n:::\n\n```{.r .cell-code}\niter <- 100\nn <- 2\ndice <- 1:6\nx_var <- rep(0, iter)\nfor (i in 1:iter) {\n  x_var[i] <- sample(dice, size = n, replace = TRUE) %>% mean()\n}\n\nhist(x_var)\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n\n\n正規分布\n\n$$\nf(x | \\mu, \\sigma^2) = \\frac{1}{\\sqrt{2\\pi\\sigma^2}} \\exp\\left(-\\frac{(x - \\mu)^2}{2\\sigma^2}\\right)\n$$\n\n\n::: {.cell}\n\n```{.r .cell-code}\nx_length <- 200\nx_lim <- seq(-5,5,length = x_length)\nx <- rep(x_lim,3)\ny <- c(dnorm(x_lim, mean = 0, sd = 1),\n       dnorm(x_lim, mean = 0, sd = 2),\n       dnorm(x_lim, mean = 2, sd = 1)\n       )\ngroup <- c(rep(\"μ=0,sd=1\",x_length),\n           rep(\"μ=0,sd=2\",x_length),\n           rep(\"μ=2,sd=1\",x_length)\n           )\n\ndata <- tibble(x = x, y = y, group = group)\n\nggplot(data = data) +\n  geom_line(aes(x = x, y = y, color = group)) + \n  labs(y = \"density\") + \n  theme(legend.position = c(0,1), legend.justification = c(0,1)) \n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

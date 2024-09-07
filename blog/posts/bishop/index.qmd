@@ -1,0 +1,9 @@
+---
+title: "ビショップ本まとめ"
+author: "Ryotaro SAKAMOTO"
+date: "2023-12-09"
+categories: [reading, psychology]
+draft: true
+---
+
+

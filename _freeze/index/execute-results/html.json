@@ -1,0 +1,14 @@
+{
+  "hash": "ba37cffce7794bb8b8cd3b6406d9377f",
+  "result": {
+    "markdown": "---\nabout:\n  template: jolla\n  id: about-block\n  image: \"img/profile.jpg\"\n  links:\n    - icon: twitter\n      text: Twitter\n      href: https://twitter.com\n    - icon: github\n      text: Github\n      href: https://github.com\n    - icon: envelope\n      text: Email\n      href: \"sakamotoryotaro582@g.ecc.u-tokyo.ac.jp\"  \n---\n\n\n::: {#about-block}\n:::\n\n# Welcome to my website!\n\n社会心理学を専攻する大学院生のウェブサイトです。</br> 勉強する中で面白かったことを発信していきます。\n\n## メニュー\n\n-   経歴は[Biography](biography/index.qmd)\n-   研究については[Research](research/index.qmd)\n-   ブログは[Blog](blog/index.qmd)\n\n\n::: {.cell}\n\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

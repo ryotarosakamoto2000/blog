@@ -1,6 +1,6 @@
 ---
 title: "やる気はなぜ長続きしないのか"
-author: "Ryotaro sakamoto"
+author: "Ryotaro SAKAMOTO"
 date: "2023-12-08"
 categories: [reading, psychology]
 image: "image.jpg"
@@ -8,16 +8,13 @@ image: "image.jpg"
 
 # なぜ「やる気」は長続きしないのか
 
-著者: デイヴィッド・デステノ  
-評価: ⭐️⭐️⭐️⭐️  
-ステータス: 読了  
-種別: 書籍  
-読了日: November 11, 2023  
+著者: デイヴィッド・デステノ\
+評価: ⭐️⭐️⭐️⭐️\
+ステータス: 読了\
+種別: 書籍\
+読了日: November 11, 2023
 
-<img width="200" src="https://m.media-amazon.com/images/I/71kDylF4nSL._SL1500_.jpg">
-
-
-
+<img src="https://m.media-amazon.com/images/I/71kDylF4nSL._SL1500_.jpg" width="200"/>
 
 # 感想
 
@@ -39,14 +36,14 @@ image: "image.jpg"
 
 アリは冬に備えるが、キリギリスは遊んでいるだけ。最終的にキリギリスはアリに見殺しにされる。将来に備えることの大切さを説く。
 
-- 将来の不確実性を高く見積もる
-- 成長マインドセットかどうか
+-   将来の不確実性を高く見積もる
+-   成長マインドセットかどうか
 
 グリスケヴィシウスの引用
 
 （彼の論文は再現性がなさそうなので、あまり信用しないように）
 
-Griskevicius, V., Ackerman, J. M., Cantú, S. M., Delton, A. W., Robertson, T. E., Simpson, J. A., Thompson, M. E., & Tybur, J. M. (2013). When the Economy Falters, Do People Spend or Save? Responses to Resource Scarcity Depend on Childhood Environments. *Psychological Science*, *24*(2), 197–205. http://www.jstor.org/stable/23355143
+Griskevicius, V., Ackerman, J. M., Cantú, S. M., Delton, A. W., Robertson, T. E., Simpson, J. A., Thompson, M. E., & Tybur, J. M. (2013). When the Economy Falters, Do People Spend or Save? Responses to Resource Scarcity Depend on Childhood Environments. *Psychological Science*, *24*(2), 197--205. http://www.jstor.org/stable/23355143
 
 幼少期のSESが低いほど、時間割引率が高いことが分かった。（これは今のSESとは関係がない）
 
@@ -58,17 +55,15 @@ Griskevicius, V., Ackerman, J. M., Cantú, S. M., Delton, A. W., Robertson, T. E
 
 才能が可変的であると考える方が、将来への投資量は増える（これは欧米圏のいろいろな研究で確かめられている）。
 
-:::{.callout-note}
-
+::: callout-note
 💡 ここでちょっと面白いと思ったのが、ウェーバーのプロテスタンティズムの倫理と資本主義の精神との違い。プロ倫の場合、自分が救われるかどうかがあらかじめ決まっているという固定された状況から、勤勉さが生まれるという少し逆説的な論理だった。そうなると、才能が固定的であると考えても、自分は才能がある人間なんだということを勉学で証明するために勤勉になるという可能性は考えられないだろうか？
-
 :::
 
 ## 2章　意志の力が失敗を呼ぶわけ
 
-- 意志の力はもともとそんなに強くない
-- バウマイスターの自我枯渇
-- もっともよく自制できている人とは？
+-   意志の力はもともとそんなに強くない
+-   バウマイスターの自我枯渇
+-   もっともよく自制できている人とは？
 
 意志の力はもともとそんなに強くない
 
@@ -94,19 +89,17 @@ Hofmann, W., Baumeister, R. F., Förster, G., & Vohs, K. D. (2012). Everyday tem
 
 ## 3章　感謝は過去ではなく、未来のモノ
 
-:::{.callout-note}
+::: callout-note
 💡 個人的にはこの章が一番説得力があって面白い。ヒトは結構簡単なメカニズムで動いていると思っているので、個々の研究も個人的には納得いくものだった。ただ、感情研究は再現性のチェックをしてほしい。
-
 :::
 
-:::{.callout-note}
+::: callout-note
 💡 感謝は、過去志向の感情だと思われがちだが、実は将来の行動に影響する感情。感謝を感じるだけで、その感謝した対象に対する「恩返し」だけではなく、赤の他人への利他行動を増やすし、将来の自分という赤の他人に対する行動も増える。さらに、意志力との決定的な違いとして、意志力は使えば使うだけ擦り切れていく（根拠は自我枯渇）が、感謝を感じる回数が増えるほど、感じやすくなり、さらにその時に感じる報酬も大きくなっていくという正の循環が生まれる。
-
 :::
 
 主に根拠としている論文は以下の通り。
 
-Bartlett, M. Y., & DeSteno, D. (2006). Gratitude and prosocial behavior: helping when it costs you. *Psychological science*, *17*(4), 319–325. https://doi.org/10.1111/j.1467-9280.2006.01705.x
+Bartlett, M. Y., & DeSteno, D. (2006). Gratitude and prosocial behavior: helping when it costs you. *Psychological science*, *17*(4), 319--325. https://doi.org/10.1111/j.1467-9280.2006.01705.x
 
 実験用のコンピュータに意図的にエラーがでるように設定。それをサクラが直してくれるという条件で、感謝させる条件。その後、その助けてくれた人がめんどくさい調査に協力してほしいと述べる。
 
@@ -116,7 +109,7 @@ Bartlett, M. Y., & DeSteno, D. (2006). Gratitude and prosocial behavior: helping
 
 →すると、別の人に対してもめんどくさい課題を長く回答してあげる傾向がみられた。
 
-DeSteno, D., Li, Y., Dickens, L., & Lerner, J. S. (2014). Gratitude: a tool for reducing economic impatience. *Psychological science*, *25*(6), 1262–1267. https://doi.org/10.1177/0956797614529979
+DeSteno, D., Li, Y., Dickens, L., & Lerner, J. S. (2014). Gratitude: a tool for reducing economic impatience. *Psychological science*, *25*(6), 1262--1267. https://doi.org/10.1177/0956797614529979
 
 感謝条件では、時間割引率が低くなる傾向
 
@@ -124,9 +117,9 @@ DeSteno, D., Li, Y., Dickens, L., & Lerner, J. S. (2014). Gratitude: a tool for 
 
 日常への影響
 
-[https://greatergood.berkeley.edu/pdfs/GratitudePDFs/6Emmons-BlessingsBurdens.pdf](https://greatergood.berkeley.edu/pdfs/GratitudePDFs/6Emmons-BlessingsBurdens.pdf)
+<https://greatergood.berkeley.edu/pdfs/GratitudePDFs/6Emmons-BlessingsBurdens.pdf>
 
-Emmons, R. A., & McCullough, M. E. (2003). Counting blessings versus burdens: an experimental investigation of gratitude and subjective well-being in daily life. *Journal of personality and social psychology*, *84*(2), 377–389. https://doi.org/10.1037//0022-3514.84.2.377
+Emmons, R. A., & McCullough, M. E. (2003). Counting blessings versus burdens: an experimental investigation of gratitude and subjective well-being in daily life. *Journal of personality and social psychology*, *84*(2), 377--389. https://doi.org/10.1037//0022-3514.84.2.377
 
 日常で感謝を書くように習慣づけると、その後の運動や生活満足度が上昇。
 
@@ -148,35 +141,33 @@ Emmons, R. A., & McCullough, M. E. (2003). Counting blessings versus burdens: an
 
 筆者が自分で行った実験を引用している。主に二つの知見
 
-- 1つ目の課題の成績を褒めることで誇りを持たせると、二つ目の心的回転問題に長い時間取り組む
-    - これは、単に成績を見せるだけという群では何もしない群と取り組む時間が変わらないことから、気分がいいだけでは説明できないとする
-- さくら、誇り持つ群、何もしない群の3人で共通の課題をやらせると、誇りを持たせた人はほかの人にアドバイスしたり、自身で取り組んでみる時間が長かった。また、ほかの人から信頼できるという評判を得た。
+-   1つ目の課題の成績を褒めることで誇りを持たせると、二つ目の心的回転問題に長い時間取り組む
+    -   これは、単に成績を見せるだけという群では何もしない群と取り組む時間が変わらないことから、気分がいいだけでは説明できないとする
+-   さくら、誇り持つ群、何もしない群の3人で共通の課題をやらせると、誇りを持たせた人はほかの人にアドバイスしたり、自身で取り組んでみる時間が長かった。また、ほかの人から信頼できるという評判を得た。
 
 ## 6章　社交的であることが成功を呼ぶ
 
 ウォルトンとコーエンの研究
 
-Walton, G. M., Cohen, G. L., Cwir, D., & Spencer, S. J. (2012). Mere belonging: the power of social connections. *Journal of personality and social psychology*, *102*(3), 513–532. https://doi.org/10.1037/a0025731
+Walton, G. M., Cohen, G. L., Cwir, D., & Spencer, S. J. (2012). Mere belonging: the power of social connections. *Journal of personality and social psychology*, *102*(3), 513--532. https://doi.org/10.1037/a0025731
 
 解けない数学の問題を解かせる。どれくらい時間をかけるかは個人の自由。
 
-- 数学によって成功した事例を読ませるが、片方は個人で頑張った経験であり、もう片方は仲間と切磋琢磨、協力して頑張った経験を読ませた
-    - 仲間と協力したほうの事例を読ませた方が取り組む時間が長
-
-- みんな同じ教室で実施するが、個人でやるといわれる人と、実は誰々（知り合いではない人だが、名字が言われる）とグループになっているといわれる人の2群に分ける
-    - 実際に解いている状況は一人でも、グループの一員だと思って解いている方が取り組む時間が長くなった
+-   数学によって成功した事例を読ませるが、片方は個人で頑張った経験であり、もう片方は仲間と切磋琢磨、協力して頑張った経験を読ませた
+    -   仲間と協力したほうの事例を読ませた方が取り組む時間が長
+-   みんな同じ教室で実施するが、個人でやるといわれる人と、実は誰々（知り合いではない人だが、名字が言われる）とグループになっているといわれる人の2群に分ける
+    -   実際に解いている状況は一人でも、グループの一員だと思って解いている方が取り組む時間が長くなった
 
 それだけではない。孤独は身体的にも精神的にも悪い影響があるということが最近の研究で分かってきている。
 
-e.g., キャリア、健康などの広い分野で失敗、テストの得点の低下、運動量の減少などなど…
+e.g., キャリア、健康などの広い分野で失敗、テストの得点の低下、運動量の減少などなど...
 
 誰かと関わりながら過ごすことは、モチベーションを上げてくれるだけではなく、孤独感を軽減するという意味で二重のメリットがあるのだ。
 
 ## ７章　外への広がり　手を高く掲げると、伸びていく
 
-:::{.callout-note}
+::: callout-note
 💡 一芸に特化するか、ジェネラリストになるか。という問い。一芸に特化するのが成功につながると最近は考えられているが、塔のようにとがった形は脆弱。ではどうすればよいのか。正解はピラミッド。
-
 :::
 
 一芸に特化するのが成功につながるのは正しい方向（と筆者は考えている）
@@ -209,9 +200,9 @@ e.g., キャリア、健康などの広い分野で失敗、テストの得点�
 
 朝にランダムに人に話しかけ、
 
-- 幸福感を測定
-- ５ドルもしくは20ドルを与え、
-- これを人のために使うか、自分のために使うかしてほしいという
+-   幸福感を測定
+-   ５ドルもしくは20ドルを与え、
+-   これを人のために使うか、自分のために使うかしてほしいという
 
 その晩、どれくらい幸福かをもう一度電話で尋ねる
 
@@ -225,9 +216,8 @@ e.g., キャリア、健康などの広い分野で失敗、テストの得点�
 
 ## 第8章　個から集団へ　－社会的成功を促す
 
-:::{.callout-note}
+::: callout-note
 💡 この章ちょっと怪しいので、重点的に読むこと
-
 :::
 
 筆者は、
@@ -246,7 +236,7 @@ e.g., キャリア、健康などの広い分野で失敗、テストの得点�
 
 感謝、誇り、思いやりの三つを持つことが、長期的な成功のカギ。
 
-- 感情をベースにしたやり方は社会的な交流を生み、ボトムアップ的に自制心を高めてくれる。その際、孤独を防いでくれるため、レジリエンス的にも効果的（3章以降）。
-- 逆に、実行機能に頼るようなトップダウン的に自制心を生む方法だと、常に認知的な負荷がかかるうえ、失敗したときのレジリエンスもない（1章、2章）。
+-   感情をベースにしたやり方は社会的な交流を生み、ボトムアップ的に自制心を高めてくれる。その際、孤独を防いでくれるため、レジリエンス的にも効果的（3章以降）。
+-   逆に、実行機能に頼るようなトップダウン的に自制心を生む方法だと、常に認知的な負荷がかかるうえ、失敗したときのレジリエンスもない（1章、2章）。
 
 **孤独に突き進むのではなく、むしろ人格を磨いて他者と交流することが実は成功への近道なのだ。**

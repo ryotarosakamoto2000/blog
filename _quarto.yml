@@ -1,7 +1,7 @@
-# This file controls the settings for your Quarto template from www.marvinschmitt.com
 
 # website settings
 website:
+  site-url: "https://www.ryotaro-sakamoto.net/"
   title: "Ryotaro SAKAMOTO"                                # Your name
   description: "graduate student of University of Tokyo"   # A brief slogan (optional)
   image: img/profile.jpg
@@ -35,9 +35,8 @@ website:
   search: 
     location: navbar
     type: textbox
-  page-footer: 
-    left: |
-      <span class="faux-block">2023 Ryotaro SAKAMOTO</span>
+    
+  page-footer: "Copyright 2023, Ryotaro SAKAMOTO. Powered by [Quarto](https://quarto.org/)"
 
 project:
   type: website
@@ -56,8 +55,8 @@ format:
   html:
     fontsize: 1.1em
     theme: 
-      - pulse
-      - html/styles.scss
+      light: [pulse, html/styles.scss]
+      dark: [pulse, html/styles.scss]
     header-includes: |
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

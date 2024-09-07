@@ -19,17 +19,13 @@ about:
 :::
 
 # Welcome to my website!
-社会心理学を専攻する大学院生のウェブサイトです。</br>
-勉強する中で面白かったことを発信していきます。
+
+社会心理学を専攻する大学院生のウェブサイトです。</br> 勉強する中で面白かったことを発信していきます。
 
 ## メニュー
 
-* 経歴は[Biography](biography/index.qmd)
-* 研究については[Research](research/index.qmd)
-* ブログは[Blog](blog/index.qmd)
-
-
-
-
+-   経歴は[Biography](biography/index.qmd)
+-   研究については[Research](research/index.qmd)
+-   ブログは[Blog](blog/index.qmd)
 
 

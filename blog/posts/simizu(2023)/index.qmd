@@ -1,0 +1,54 @@
+---
+title: "数値シミュレーションで読み解く統計のしくみ"
+author: "Ryotaro SAKAMOTO"
+date: "2023-12-09"
+categories: [reading, psychology]
+draft: true
+---
+
+# chapter 3
+
+さいころを2つ振って平均を求めるシミュレーション
+
+```{r}
+library(tidyverse)
+
+iter <- 100
+n <- 2
+dice <- 1:6
+x_var <- rep(0, iter)
+for (i in 1:iter) {
+  x_var[i] <- sample(dice, size = n, replace = TRUE) %>% mean()
+}
+
+hist(x_var)
+```
+
+正規分布
+
+$$
+f(x | \mu, \sigma^2) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp\left(-\frac{(x - \mu)^2}{2\sigma^2}\right)
+$$
+
+```{r}
+
+x_length <- 200
+x_lim <- seq(-5,5,length = x_length)
+x <- rep(x_lim,3)
+y <- c(dnorm(x_lim, mean = 0, sd = 1),
+       dnorm(x_lim, mean = 0, sd = 2),
+       dnorm(x_lim, mean = 2, sd = 1)
+       )
+group <- c(rep("μ=0,sd=1",x_length),
+           rep("μ=0,sd=2",x_length),
+           rep("μ=2,sd=1",x_length)
+           )
+
+data <- tibble(x = x, y = y, group = group)
+
+ggplot(data = data) +
+  geom_line(aes(x = x, y = y, color = group)) + 
+  labs(y = "density") + 
+  theme(legend.position = c(0,1), legend.justification = c(0,1)) 
+
+```
