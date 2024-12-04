@@ -2,8 +2,10 @@
   {
     "listing": "/blog/index.html",
     "items": [
-      "/blog/posts/evo_fire/index.html",
       "/blog/posts/muchi_no_kagaku/index.html",
+      "/blog/posts/bank_finance_3rd/index.html",
+      "/blog/posts/evo_fire/index.html",
+      "/blog/posts/Japanese_history/index.html",
       "/blog/posts/yaruki-nagatsuzuki/index.html"
     ]
   }
