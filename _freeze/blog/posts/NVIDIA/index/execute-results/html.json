@@ -1,0 +1,16 @@
+{
+  "hash": "10f13717d8914d8cd6eab5839a4dbfca",
+  "result": {
+    "markdown": "---\ntitle: \"NVIDIA\"\nauthor: \"Ryotaro SAKAMOTO\"\ndate: \"2024-12-15\"\ncategories: [R]\ndraft: false\n---\n\n\nR関連の記事を見ていたら、仕事とも関連のありそうな面白い記事を見つけたので紹介する。今後公開データを入手できたら、このような分析を趣味ベースでやっていくのはありだと感じた。\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\nlibrary(timetk)\nlibrary(tidyquant)\nlibrary(lubridate) \nlibrary(ggtext)\n\n#NVIDIA Corporation Earnings\ndf_nvda_earnings <- read.delim(\"https://raw.githubusercontent.com/mesdi/blog/refs/heads/main/nvidia_earnings.txt\", header = FALSE) %>% \n  as.tibble() %>% \n  janitor::clean_names() %>% \n  rename(date = v1, revenue = v4) %>% \n  select(date, revenue) %>% \n  mutate(\n    date = date %>% \n      parse_date_time(\"%b %d, %Y\") %>%  \n      floor_date(\"month\") %>% \n      add_with_rollback(months(-2)) %>% \n      as.yearqtr(), \n    revenue = revenue %>% \n      str_remove(\"B \") %>% \n      as.numeric()\n  ) %>%\n  mutate(revenue = revenue / lead(revenue) - 1) %>% \n  drop_na()\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\ndf_nvda_earnings %>% \n  ggplot(aes(x = date, \n             y = revenue)) +\n  geom_col(alpha = 0.7,\n           fill = \"#76b900\") +\n  geom_smooth(se = FALSE) +\n  geom_text(aes(label= paste0(round(revenue,2) * 100,\"%\")),\n            vjust = ifelse(df_nvda_earnings$revenue >= 0, 1.5, -0.5 ), \n            color = \"whitesmoke\", \n            fontface = \"bold\",\n            size = 6) +\n  scale_x_yearqtr(format = \"%Y Q%q\") +\n  scale_y_continuous(labels = scales::percent) +\n  labs(title = \"Change of % <span style='color:#76b900;'>NVIDIA Corporation's Revenue</span>\",\n       y = \"\", \n       subtitle = \"Quarter over Quarter\",\n       x = \"\") + \n  theme_minimal() + \n  theme(legend.position = \"none\",\n        plot.subtitle = element_text(size = 16),\n        plot.title = ggtext::element_markdown(size = 20),\n        axis.text = element_text(face = \"bold\", size = 18),\n        text = element_text(face = \"bold\", size = 20),\n        panel.grid = element_blank(),\n        plot.background = element_rect(color = \"azure\", fill = \"azure\"),\n        panel.grid.major.y = element_line(linetype = \"dashed\", color = \"gray\"))\n```\n\n::: {.cell-output .cell-output-stderr}\n```\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n```\n:::\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
