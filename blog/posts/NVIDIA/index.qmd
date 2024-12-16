@@ -1,0 +1,69 @@
+---
+title: "NVIDIA"
+author: "Ryotaro SAKAMOTO"
+date: "2024-12-15"
+categories: [R]
+draft: false
+---
+
+R関連の記事を見ていたら、仕事とも関連のありそうな面白い記事を見つけたので紹介する。今後公開データを入手できたら、このような分析を趣味ベースでやっていくのはありだと感じた。
+
+```{r warning=FALSE, message=FALSE}
+
+library(tidyverse)
+library(timetk)
+library(tidyquant)
+library(lubridate) 
+library(ggtext)
+
+#NVIDIA Corporation Earnings
+df_nvda_earnings <- read.delim("https://raw.githubusercontent.com/mesdi/blog/refs/heads/main/nvidia_earnings.txt", header = FALSE) %>% 
+  as.tibble() %>% 
+  janitor::clean_names() %>% 
+  rename(date = v1, revenue = v4) %>% 
+  select(date, revenue) %>% 
+  mutate(
+    date = date %>% 
+      parse_date_time("%b %d, %Y") %>%  
+      floor_date("month") %>% 
+      add_with_rollback(months(-2)) %>% 
+      as.yearqtr(), 
+    revenue = revenue %>% 
+      str_remove("B ") %>% 
+      as.numeric()
+  ) %>%
+  mutate(revenue = revenue / lead(revenue) - 1) %>% 
+  drop_na()
+```
+
+```{r}
+df_nvda_earnings %>% 
+  ggplot(aes(x = date, 
+             y = revenue)) +
+  geom_col(alpha = 0.7,
+           fill = "#76b900") +
+  geom_smooth(se = FALSE) +
+  geom_text(aes(label= paste0(round(revenue,2) * 100,"%")),
+            vjust = ifelse(df_nvda_earnings$revenue >= 0, 1.5, -0.5 ), 
+            color = "whitesmoke", 
+            fontface = "bold",
+            size = 6) +
+  scale_x_yearqtr(format = "%Y Q%q") +
+  scale_y_continuous(labels = scales::percent) +
+  labs(title = "Change of % <span style='color:#76b900;'>NVIDIA Corporation's Revenue</span>",
+       y = "", 
+       subtitle = "Quarter over Quarter",
+       x = "") + 
+  theme_minimal() + 
+  theme(legend.position = "none",
+        plot.subtitle = element_text(size = 16),
+        plot.title = ggtext::element_markdown(size = 20),
+        axis.text = element_text(face = "bold", size = 18),
+        text = element_text(face = "bold", size = 20),
+        panel.grid = element_blank(),
+        plot.background = element_rect(color = "azure", fill = "azure"),
+        panel.grid.major.y = element_line(linetype = "dashed", color = "gray"))
+```
+
+
+

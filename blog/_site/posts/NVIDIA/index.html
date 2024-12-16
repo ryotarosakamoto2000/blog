@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Ryotaro SAKAMOTO">
-<meta name="dcterms.date" content="2024-12-04">
+<meta name="dcterms.date" content="2024-12-15">
 
-<title>blog - 日本史</title>
+<title>blog - NVIDIA</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -108,10 +142,9 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">日本史</h1>
+      <h1 class="title">NVIDIA</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">reading</div>
-                <div class="quarto-category">history</div>
+                <div class="quarto-category">R</div>
               </div>
                   </div>
   </div>
@@ -129,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">December 4, 2024</p>
+        <p class="date">December 15, 2024</p>
       </div>
     </div>
     
@@ -147,82 +180,69 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="詳説-日本史" class="level1">
-<h1>詳説　日本史</h1>
-<p>小学生以来の日本史の勉強。印象に残った箇所をメモ程度に記す。</p>
-<section id="地方政治の展開と武士" class="level2">
-<h2 class="anchored" data-anchor-id="地方政治の展開と武士">地方政治の展開と武士</h2>
-<p><strong>受領と負名</strong></p>
-<blockquote class="blockquote">
-<p>戸籍に記載された成人男性（正丁）を中心に課税する律令体制の原則は崩れ、土地を基礎に受領が負名（「名」という徴税単位の請「負」人）から徴税する体制ができていった。（p79）</p>
-</blockquote>
-<p>受領：国司の最上席者（一国の財産を前任者から引き継ぐことから） 負名： 田堵：</p>
-<p>受領も公領の経営は田堵との契約であり、国司交代以外は目代と在庁官人に任せ、普段は在京する（遙任）することが増えた。</p>
-<ul>
-<li>私財を出して朝廷の儀式や造宮・造寺などの費用を請け負う＝成功（じょうごう）「功」（国家への貢献）を「成」す。</li>
-<li>成功によって同じポストに再任されたり、任期を延長される＝重任（ちょうにん）</li>
-</ul>
-<blockquote class="blockquote">
-<p>開発領主の中には、国衙の干渉を免れるために所領を中央の権力者に寄進し、権力者を領主と仰ぐ荘園として自らは荘官となるものも現れた。</p>
-</blockquote>
-<p>荘園の中には、官物や臨時雑役の免除（不輸）や検田使などの国衙の死者の立ち入りを認めない（不入）荘園も増えていった。 ⇒受領から中央への税収が減少したため、天皇家や摂関家、大寺社は積極的に寄進を受け入れた。（荘園が拡大した理由）</p>
-<p><strong>地方の反乱と武士の成長</strong></p>
-<p>国司の子孫や地方豪族を鎮圧するために政府から押領使や追捕使に任じされた中・下級貴族の中には、そのまま在庁官人として現地に残り、武士（兵）となるものが現れた。</p>
-<ul>
-<li>平将門</li>
-<li>藤原純友</li>
-</ul>
-<p>朝廷や貴族も武士を侍として奉仕させるようになった。</p>
-<blockquote class="blockquote">
-<p>中央貴族の血筋を引く清和源氏や桓武平氏を棟梁と仰ぐようになり、源平両氏は地方武士団を広く組織した武家（軍事貴族）を形成して、大きな勢力を築くようになった。</p>
-</blockquote>
-<p>源氏は、 - 平忠常の乱 - 前九年合戦・後三年合戦</p>
-<p>を経て東国の武士団と主従関係を強めていく。</p>
-<p><strong>ヨーロッパ人の東アジア進出</strong> 大交易時代の背景には、宗教改革によってカトリック内部から改革の必要性を痛感していた宣教師の存在、拡大していたイスラーム世界への対処があった。</p>
-<ul>
-<li>スペイン⇒マニラ</li>
-<li>ポルトガル⇒マカオ</li>
-</ul>
-<p><strong>南蛮貿易とキリスト教</strong></p>
-<p>当時神谷寿禎による灰吹法の伝来によって石見大森銀山からの銀の生産量が飛躍的に増大していた。日本は、ポルトガル人を介して、銀を売って中国産の生糸を買っていた。また、ポルトガルが銀を欲していたのは、ポトシ銀山の銀を背景に東アジア貿易に参加したスペインに対抗するため。</p>
-<p><a href="https://www.pref.shimane.lg.jp/life/bunka/bunkazai/ginzan/outline/outline_08.html" class="uri">https://www.pref.shimane.lg.jp/life/bunka/bunkazai/ginzan/outline/outline_08.html</a></p>
-<p>島根県の石見銀山の歴史ページめっちゃ面白い。</p>
-<ul>
-<li>灰吹法による銀の生産拡大は大内氏への献上銀が毎年16kgから80kgに急増するほど！ ― 　ソーマ銀の由来は佐摩村</li>
-<li>15世紀後半から16世紀初頭の石見銀山の開発以前に、日本は既に東アジアにおける銅・鉄を中心とする金属資源の供給国であり、その供給経路を使うことができた</li>
-<li>石見銀山をめぐる大名の抗争</li>
-</ul>
-<blockquote class="blockquote">
-<p>ポルトガル船は布教を許可した大名領にのみ入港したので、貿易の利益を求め、キリスト教を保護し、自ら入信するキリシタン大名が現れた。</p>
-</blockquote>
-<p>貿易と宣教が一体となっていたのがミソ。</p>
-<p>ヴァリニャーニの勧めによって天正遣欧使節が派遣される。これは、日本人にヨーロッパを見せると同時にヨーロッパに日本を知らしめるという目的があったらしい（wiki）。 （ヴァリニャーニは織田信長に黒人奴隷を献上した。これが近年話題になった弥助。）</p>
-<p>織田信長 足利義明を京都から追放して室町幕府を滅ぼした。</p>
-<p>豊臣秀吉 朝廷から関白に任じられた後、惣無事令を出し、違反したとして四国平定（長曾我部）、九州平定（島津）、小田原平定（北条）を実施。</p>
-<blockquote class="blockquote">
-<p>関白は五摂家（一条・二条・九条・近衛・鷹司）というTOP藤原氏でなければなれない。ここは近衛家の養子にしてもらったのである。</p>
-</blockquote>
-<ul>
-<li>太閤検地：土地の面積表示を「町・段・畝・歩」に統一、枡の容量も京枡に統一し、石高制を確立</li>
-<li>刀狩：農民から武器を没収 ― 人掃令：諸身分を確定させ、兵農分離を確立</li>
-</ul>
-<p>禁中並公家諸法度 語感だけで覚えていたが、武家諸法度の公家verだと思えばわかりやすい。</p>
-<p>鎖国政策の理由</p>
-<ul>
-<li>キリスト教の禁教政策</li>
-<li>貿易に関係している西国の大名が富強になるのを恐れて、貿易を幕府の統括下に置こうとした</li>
-</ul>
-<p>なぜ長崎なのか？</p>
-<ul>
-<li>長崎がもともと貿易の拠点だったから</li>
-<li>幕府から<strong>一番遠い</strong>直轄領（天領）だから</li>
-</ul>
-<p>この二つは関係していて、秀吉が九州平定した際に、長崎がキリシタン大名の大村純忠からイエズス会に寄進されているのを知って危機感を持ち、長崎を直轄領にした。</p>
-<p><a href="https://www.y-history.net/appendix/wh0801-119.html" class="uri">https://www.y-history.net/appendix/wh0801-119.html</a></p>
+<p>R関連の記事を見ていたら、仕事とも関連のありそうな面白い記事を見つけたので紹介する。今後公開データを入手できたら、このような分析を趣味ベースでやっていくのはありだと感じた。</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(timetk)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyquant)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate) </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggtext)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">#NVIDIA Corporation Earnings</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>df_nvda_earnings <span class="ot">&lt;-</span> <span class="fu">read.delim</span>(<span class="st">"https://raw.githubusercontent.com/mesdi/blog/refs/heads/main/nvidia_earnings.txt"</span>, <span class="at">header =</span> <span class="cn">FALSE</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.tibble</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  janitor<span class="sc">::</span><span class="fu">clean_names</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">date =</span> v1, <span class="at">revenue =</span> v4) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(date, revenue) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">date =</span> date <span class="sc">%&gt;%</span> </span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>      <span class="fu">parse_date_time</span>(<span class="st">"%b %d, %Y"</span>) <span class="sc">%&gt;%</span>  </span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>      <span class="fu">floor_date</span>(<span class="st">"month"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>      <span class="fu">add_with_rollback</span>(<span class="fu">months</span>(<span class="sc">-</span><span class="dv">2</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>      <span class="fu">as.yearqtr</span>(), </span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">revenue =</span> revenue <span class="sc">%&gt;%</span> </span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_remove</span>(<span class="st">"B "</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>      <span class="fu">as.numeric</span>()</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">revenue =</span> revenue <span class="sc">/</span> <span class="fu">lead</span>(revenue) <span class="sc">-</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df_nvda_earnings <span class="sc">%&gt;%</span> </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> date, </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>             <span class="at">y =</span> revenue)) <span class="sc">+</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>           <span class="at">fill =</span> <span class="st">"#76b900"</span>) <span class="sc">+</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label=</span> <span class="fu">paste0</span>(<span class="fu">round</span>(revenue,<span class="dv">2</span>) <span class="sc">*</span> <span class="dv">100</span>,<span class="st">"%"</span>)),</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>            <span class="at">vjust =</span> <span class="fu">ifelse</span>(df_nvda_earnings<span class="sc">$</span>revenue <span class="sc">&gt;=</span> <span class="dv">0</span>, <span class="fl">1.5</span>, <span class="sc">-</span><span class="fl">0.5</span> ), </span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>            <span class="at">color =</span> <span class="st">"whitesmoke"</span>, </span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>            <span class="at">fontface =</span> <span class="st">"bold"</span>,</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>            <span class="at">size =</span> <span class="dv">6</span>) <span class="sc">+</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_yearqtr</span>(<span class="at">format =</span> <span class="st">"%Y Q%q"</span>) <span class="sc">+</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span>percent) <span class="sc">+</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Change of % &lt;span style='color:#76b900;'&gt;NVIDIA Corporation's Revenue&lt;/span&gt;"</span>,</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">""</span>, </span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">"Quarter over Quarter"</span>,</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">""</span>) <span class="sc">+</span> </span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span> </span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>,</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>),</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.title =</span> ggtext<span class="sc">::</span><span class="fu">element_markdown</span>(<span class="at">size =</span> <span class="dv">20</span>),</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">size =</span> <span class="dv">18</span>),</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>        <span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">size =</span> <span class="dv">20</span>),</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.background =</span> <span class="fu">element_rect</span>(<span class="at">color =</span> <span class="st">"azure"</span>, <span class="at">fill =</span> <span class="st">"azure"</span>),</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.major.y =</span> <span class="fu">element_line</span>(<span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"gray"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using method = 'loess' and formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
