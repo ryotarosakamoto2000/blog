@@ -7,7 +7,8 @@ categories: [R, economics]
 draft: false
 ---
 
-Rで株価分析ができるtidyquantというライブラリがあるらしい。 このライブラリの特徴としては、
+Rで株価分析ができるtidyquantというライブラリがあるらしい。  
+このライブラリの特徴としては、
 
 -   {xts}, {zoo}, {quantmod}, {TTR}, {PerformanceAnalysis}の関数を活用したライブラリ
 -   tidyverseと親和性が高い
@@ -16,17 +17,13 @@ Rで株価分析ができるtidyquantというライブラリがあるらしい�
 
 <https://cran.r-project.org/web/packages/tidyquant/vignettes/TQ01-core-functions-in-tidyquant.html>
 
-<https://cran.r-project.org/web/packages/tidyquant/vignettes/TQ02-quant-integrations-in-tidyquant.html>
-
-<https://cran.r-project.org/web/packages/tidyquant/vignettes/TQ05-performance-analysis-with-tidyquant.html>
-
-```{r}
+```{r message=FALSE, warning=FALSE}
 library(tidyquant)
 library(tidyverse)
 library(ggthemes)
 ```
 
-基礎的な関数
+# tq_index, tq_exchange
 
 ```{r}
 tq_index_options()
@@ -37,7 +34,8 @@ tq_exchange_options()
 
 ## tq_get
 
-基本的にはyahoo financeからデータを取得するが、ソースを個々に設定することができる。bloombergもある。
+基本的にはyahoo financeからデータを取得するが、ソースを個々に設定することができる。bloombergもある。  
+また、かつては財務データが入手可能だったようだが、ソースのデータ提供が終了したっぽい。残念。
 
 ```{r}
 # 取得可能データ一覧
@@ -61,19 +59,25 @@ FANG
 
 ## tq_transmute()
 
--   select:ピックアップして変形する列
--   mutate_fun: 変形方法 e.g., to.monthly, to.period
--   indexAt:
+<http://delta0726.web.fc2.com/packages/finance/tidyquant.html>
+
+活用事例をいくつか紹介してくださっている。
 
 ```{r}
 FANG |> 
     group_by(symbol) |> 
-    tq_transmute(select = adjusted, mutate_fun = to.monthly, indexAt = "lastof") |> ggplot() + geom_line(aes(x=date, y=adjusted,color=symbol))  + theme_economist_white() +
-    labs(
-        title = "FANG Stock Prices (Monthly Adjusted)",
-        x = "",
-        y = "",
-        color = "Symbol",
-        legend.position = "right"
+    tq_transmute(
+      select = adjusted,
+      mutate_fun = to.monthly,
+      indexAt = "lastof"
+    ) |>
+  ggplot() + 
+  geom_line(aes(x=date, y=adjusted,color=symbol))  +
+  theme_economist_white() +
+  labs(
+      title = "FANG Stock Prices (Monthly Adjusted)",
+      x = "",y = "",
+      color = "Symbol",
+      legend.position = "right"
     )
 ```
