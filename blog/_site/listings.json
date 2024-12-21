@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/tidyquant_tutorial/index.html",
       "/posts/NVIDIA/index.html",
       "/posts/bank_finance_3rd/index.html",
       "/posts/evo_fire/index.html",

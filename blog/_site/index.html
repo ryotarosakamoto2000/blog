@@ -71,9 +71,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -157,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(1)</span></div><div class="category" data-category="anthropology">anthropology <span class="quarto-category-count">(1)</span></div><div class="category" data-category="finance">finance <span class="quarto-category-count">(1)</span></div><div class="category" data-category="psychology">psychology <span class="quarto-category-count">(2)</span></div><div class="category" data-category="qualification">qualification <span class="quarto-category-count">(1)</span></div><div class="category" data-category="reading">reading <span class="quarto-category-count">(3)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(2)</span></div><div class="category" data-category="anthropology">anthropology <span class="quarto-category-count">(1)</span></div><div class="category" data-category="economics">economics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="finance">finance <span class="quarto-category-count">(1)</span></div><div class="category" data-category="psychology">psychology <span class="quarto-category-count">(2)</span></div><div class="category" data-category="qualification">qualification <span class="quarto-category-count">(1)</span></div><div class="category" data-category="reading">reading <span class="quarto-category-count">(3)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -171,7 +171,45 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="R" data-listing-date-sort="1734188400000" data-listing-file-modified-sort="1734356974623" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="0" data-categories="R,economics" data-listing-date-sort="1734447600000" data-listing-file-modified-sort="1734793512477" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="./posts/tidyquant_tutorial/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+</div>
+<div class="body">
+<a href="./posts/tidyquant_tutorial/index.html">
+<h3 class="no-anchor listing-title">
+tidyquantを使ってみる
+</h3>
+<div class="listing-subtitle">
+文献がすくない…
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
+R
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('economics'); return false;">
+economics
+</div>
+</div>
+<a href="./posts/tidyquant_tutorial/index.html">
+<div class="listing-description">
+Rで株価分析ができるtidyquantというライブラリがあるらしい。 このライブラリの特徴としては、
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/tidyquant_tutorial/index.html">
+<div class="listing-date">
+Dec 18, 2024
+</div>
+<div class="listing-author">
+Ryotaro SAKAMOTO
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="R" data-listing-date-sort="1734188400000" data-listing-file-modified-sort="1734356974623" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
 <div class="thumbnail">
 <p><a href="./posts/NVIDIA/index.html"> <p class="card-img-top"><img src="posts\NVIDIA\index_files\figure-html\unnamed-chunk-2-1.png"  class="thumbnail-image card-img"/></p> </a></p>
 </div>
@@ -206,7 +244,7 @@ Ryotaro SAKAMOTO
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="qualification,finance" data-listing-date-sort="1725634800000" data-listing-file-modified-sort="1726043629597" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="2" data-categories="qualification,finance" data-listing-date-sort="1725634800000" data-listing-file-modified-sort="1726043629597" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
 <div class="thumbnail">
 <p><a href="./posts/bank_finance_3rd/index.html"> <p class="card-img-top"><img src="posts\bank_finance_3rd\image.png"  class="thumbnail-image card-img"/></p> </a></p>
 </div>
@@ -244,7 +282,7 @@ Ryotaro SAKAMOTO
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="reading,anthropology" data-listing-date-sort="1725634800000" data-listing-file-modified-sort="1734266232846" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="3" data-categories="reading,anthropology" data-listing-date-sort="1725634800000" data-listing-file-modified-sort="1734266232846" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
 <div class="thumbnail">
 <p><a href="./posts/evo_fire/index.html"> <p class="card-img-top"><img src="https://m.media-amazon.com/images/I/81kYTJww63L.jpg"  class="thumbnail-image card-img"/></p> </a></p>
 </div>
@@ -283,7 +321,7 @@ Ryotaro SAKAMOTO
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="reading,psychology" data-listing-date-sort="1725634800000" data-listing-file-modified-sort="1733320121129" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="4" data-categories="reading,psychology" data-listing-date-sort="1725634800000" data-listing-file-modified-sort="1733320121129" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
 <div class="thumbnail">
 <p><a href="./posts/muchi_no_kagaku/index.html"> <p class="card-img-top"><img src="https://m.media-amazon.com/images/I/41umdmCIC+L._SX336_BO1,204,203,200_.jpg"  class="thumbnail-image card-img"/></p> </a></p>
 </div>
@@ -321,7 +359,7 @@ Ryotaro SAKAMOTO
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="reading,psychology" data-listing-date-sort="1701961200000" data-listing-file-modified-sort="1725711714868" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="5" data-categories="reading,psychology" data-listing-date-sort="1701961200000" data-listing-file-modified-sort="1725711714868" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
 <div class="thumbnail">
 <p><a href="./posts/yaruki-nagatsuzuki/index.html"> <img src="./posts/yaruki-nagatsuzuki/image.jpg" class="thumbnail-image"> </a></p>
 </div>

@@ -1,0 +1,79 @@
+---
+title: "tidyquantを使ってみる"
+author: "Ryotaro SAKAMOTO"
+subtitle: "文献がすくない..."
+date: "2024-12-18"
+categories: [R, economics]
+draft: false
+---
+
+Rで株価分析ができるtidyquantというライブラリがあるらしい。 このライブラリの特徴としては、
+
+-   {xts}, {zoo}, {quantmod}, {TTR}, {PerformanceAnalysis}の関数を活用したライブラリ
+-   tidyverseと親和性が高い
+
+網羅的に紹介してくれている文献（英語）があるので、この記事では自分が今後使えそうな関数に限って紹介する。
+
+<https://cran.r-project.org/web/packages/tidyquant/vignettes/TQ01-core-functions-in-tidyquant.html>
+
+<https://cran.r-project.org/web/packages/tidyquant/vignettes/TQ02-quant-integrations-in-tidyquant.html>
+
+<https://cran.r-project.org/web/packages/tidyquant/vignettes/TQ05-performance-analysis-with-tidyquant.html>
+
+```{r}
+library(tidyquant)
+library(tidyverse)
+library(ggthemes)
+```
+
+基礎的な関数
+
+```{r}
+tq_index_options()
+tq_index("SP500")
+
+tq_exchange_options()
+```
+
+## tq_get
+
+基本的にはyahoo financeからデータを取得するが、ソースを個々に設定することができる。bloombergもある。
+
+```{r}
+# 取得可能データ一覧
+tq_get_options()
+```
+
+株価
+
+```{r}
+appl_prices <- tq_get("AAPL", get = "stock.prices", from = "1990-01-01")
+appl_prices
+```
+
+```{r}
+appl_prices |> ggplot(aes(x=date,y=adjusted)) + geom_line(color = "brown") + theme_economist_white()+labs(x="Date",y="",title= "AAPL Stock Price")
+```
+
+```{r}
+FANG
+```
+
+## tq_transmute()
+
+-   select:ピックアップして変形する列
+-   mutate_fun: 変形方法 e.g., to.monthly, to.period
+-   indexAt:
+
+```{r}
+FANG |> 
+    group_by(symbol) |> 
+    tq_transmute(select = adjusted, mutate_fun = to.monthly, indexAt = "lastof") |> ggplot() + geom_line(aes(x=date, y=adjusted,color=symbol))  + theme_economist_white() +
+    labs(
+        title = "FANG Stock Prices (Monthly Adjusted)",
+        x = "",
+        y = "",
+        color = "Symbol",
+        legend.position = "right"
+    )
+```
