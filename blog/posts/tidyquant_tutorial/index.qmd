@@ -8,6 +8,7 @@ draft: false
 ---
 
 Rで株価分析ができるtidyquantというライブラリがあるらしい。  
+
 このライブラリの特徴としては、
 
 -   {xts}, {zoo}, {quantmod}, {TTR}, {PerformanceAnalysis}の関数を活用したライブラリ
