@@ -167,14 +167,15 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="詳説-日本史" class="level1">
 <h1>詳説　日本史</h1>
-<p>小学生以来の日本史の勉強。印象に残った箇所をメモ程度に記す。</p>
+<p>小学生以来の日本史の勉強。備忘のために雑多に記す。</p>
+<p><img src="教科書.jpg" class="img-fluid"></p>
 <section id="地方政治の展開と武士" class="level2">
 <h2 class="anchored" data-anchor-id="地方政治の展開と武士">地方政治の展開と武士</h2>
 <p><strong>受領と負名</strong></p>
 <blockquote class="blockquote">
 <p>戸籍に記載された成人男性（正丁）を中心に課税する律令体制の原則は崩れ、土地を基礎に受領が負名（「名」という徴税単位の請「負」人）から徴税する体制ができていった。（p79）</p>
 </blockquote>
-<p>受領：国司の最上席者（一国の財産を前任者から引き継ぐことから） 負名： 田堵：</p>
+<p>受領：国司の最上席者（一国の財産を前任者から引き継ぐことから）</p>
 <p>受領も公領の経営は田堵との契約であり、国司交代以外は目代と在庁官人に任せ、普段は在京する（遙任）することが増えた。</p>
 <ul>
 <li>私財を出して朝廷の儀式や造宮・造寺などの費用を請け負う＝成功（じょうごう）「功」（国家への貢献）を「成」す。</li>
@@ -270,7 +271,7 @@ Note
 <section id="戦後日本の経済成長" class="level4">
 <h4 class="anchored" data-anchor-id="戦後日本の経済成長">戦後日本の経済成長</h4>
 <p><a href="http://nozawanote.g1.xrea.com/01tuusi/09gendai/gendai5.html" class="uri">http://nozawanote.g1.xrea.com/01tuusi/09gendai/gendai5.html</a></p>
-<p>ポイントは「有史以来の好況」を示す、神武景気・岩戸景気・いざなぎ景気は日本の歴史を遡るように名づけられている。 また、有名な「もはや戦後ではない」という言葉の真意についても記述があるので必読。</p>
+<p>「有史以来の好況」を示す、神武景気・岩戸景気・いざなぎ景気は日本の歴史を遡るように名づけられている。 有名な「もはや戦後ではない」という言葉の真意についても記述があるので必読。</p>
 <p>1970年には環境庁が発足し、バラバラに行われていた郊外行政と環境保全施策の一本化が図られた。</p>
 </section>
 <section id="現代の諸問題" class="level4">
@@ -667,6 +668,22 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp("https:\/\/www\.ryotaro-sakamoto\.net\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          // default icon
+          link.classList.add("external");
+      }
+    }
 });
 </script>
 </div> <!-- /content -->
